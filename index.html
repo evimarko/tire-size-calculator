@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tire Size Calculator - compare tire sizes and speedometer error</title>
+<meta name="description" content="Free tire size calculator: wheel diameter from 205/55 R16, compare two tire sizes, speedometer difference and plus-size equivalents. No dependencies, no tracking.">
+<meta name="color-scheme" content="light dark">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap bar">
+    <div>
+      <h1 data-i18n="title">Tire Size Calculator</h1>
+      <p class="sub" data-i18n="subtitle"></p>
+    </div>
+    <div class="ctl">
+      <label><span data-i18n="lang">Language</span>
+        <select id="lang"></select></label>
+      <div class="seg" role="group" aria-label="Units">
+        <button type="button" id="u-mm" aria-pressed="true" data-i18n="mm">mm</button>
+        <button type="button" id="u-in" aria-pressed="false" data-i18n="inch">inch</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="cols">
+    <section class="card" id="card-old" aria-labelledby="h-old">
+      <h2 id="h-old" data-i18n="oldTire">Current tire</h2>
+      <label class="full"><span data-i18n="quick"></span>
+        <input id="old-q" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="205/55R16"></label>
+      <div class="row3">
+        <label><span class="l-width" data-i18n="width"></span><select id="old-w"></select></label>
+        <label><span data-i18n="aspect"></span><select id="old-a"></select></label>
+        <label><span data-i18n="rim"></span><select id="old-r"></select></label>
+      </div>
+      <p class="err" id="old-err" role="alert" hidden></p>
+      <dl class="res" id="old-res"></dl>
+    </section>
+
+    <section class="card" id="card-new" aria-labelledby="h-new">
+      <h2 id="h-new" data-i18n="newTire">New tire</h2>
+      <label class="full"><span data-i18n="quick"></span>
+        <input id="new-q" type="text" inputmode="text" autocomplete="off" spellcheck="false" value="225/45R17"></label>
+      <div class="row3">
+        <label><span class="l-width" data-i18n="width"></span><select id="new-w"></select></label>
+        <label><span data-i18n="aspect"></span><select id="new-a"></select></label>
+        <label><span data-i18n="rim"></span><select id="new-r"></select></label>
+      </div>
+      <p class="err" id="new-err" role="alert" hidden></p>
+      <dl class="res" id="new-res"></dl>
+    </section>
+  </div>
+
+  <section class="card" id="cmp" aria-live="polite">
+    <h2 data-i18n="comparison">Comparison</h2>
+    <div id="cmp-body"></div>
+  </section>
+
+  <section class="card" id="plus">
+    <h2 data-i18n="plus"></h2>
+    <p class="hint" data-i18n="plusHint"></p>
+    <div id="plus-body"></div>
+  </section>
+
+  <p class="hint disc" data-i18n="disclaimer"></p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <a id="evi" href="https://evimarko.com/?utm_source=github&amp;utm_medium=referral&amp;utm_campaign=tire-calculator" rel="noopener" target="_blank" data-i18n="footer">Made by Evimarko — CRM for tire shops and auto repair</a>
+  </div>
+</footer>
+
+<noscript><p class="wrap">JavaScript is required.</p></noscript>
+<script type="module" src="calculator.js"></script>
+</body>
+</html>

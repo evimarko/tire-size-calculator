@@ -1,0 +1,15 @@
+{
+  "name": "tire-size-calculator",
+  "version": "1.0.0",
+  "description": "Tire / wheel size calculator: overall diameter, size comparison, speedometer error and plus-size equivalents. Zero dependencies.",
+  "type": "module",
+  "main": "tire.js",
+  "exports": "./tire.js",
+  "files": ["tire.js"],
+  "scripts": { "test": "node --test tests/tire.test.mjs" },
+  "keywords": ["tire", "tyre", "wheel", "calculator", "speedometer", "plus-sizing", "automotive"],
+  "homepage": "https://github.com/evimarko/tire-size-calculator",
+  "repository": { "type": "git", "url": "git+https://github.com/evimarko/tire-size-calculator.git" },
+  "license": "MIT",
+  "author": "PROGRESS MARKETING LTD EOOD (Evimarko) <https://evimarko.com>"
+}
